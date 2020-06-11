@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_expression"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:textAlignment="viewEnd"
+            android:textSize="30sp"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            style="@style/TextAppearance.AppCompat.Medium"/>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:textAlignment="viewEnd"
+            android:textSize="50sp"
+            android:text="0"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            style="@style/TextAppearance.AppCompat.Title"/>
+    </HorizontalScrollView>
+
+    <android.support.v7.widget.GridLayout
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/layout_border"
+        grid:alignmentMode="alignBounds"
+        grid:columnCount="4"
+        grid:rowCount="5">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:theme="@style/AppTheme.Button"
+            android:text="C"
+            android:onClick="onClearKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:theme="@style/AppTheme.Button"
+            android:text="del"
+            android:onClick="onDeleteKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_percentage"
+            android:theme="@style/AppTheme.Button"
+            android:text="%"
+            android:onClick="onOperationKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_divide"
+            android:theme="@style/AppTheme.Button"
+            android:text="/"
+            android:onClick="onOperationKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_7"
+            android:theme="@style/AppTheme.Button"
+            android:text="7"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_8"
+            android:theme="@style/AppTheme.Button"
+            android:text="8"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_9"
+            android:theme="@style/AppTheme.Button"
+            android:text="9"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_multiply"
+            android:theme="@style/AppTheme.Button"
+            android:text="x"
+            android:onClick="onOperationKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_4"
+            android:theme="@style/AppTheme.Button"
+            android:text="4"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_5"
+            android:theme="@style/AppTheme.Button"
+            android:text="5"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_6"
+            android:theme="@style/AppTheme.Button"
+            android:text="6"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_minus"
+            android:theme="@style/AppTheme.Button"
+            android:text="-"
+            android:onClick="onOperationKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_1"
+            android:theme="@style/AppTheme.Button"
+            android:text="1"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_2"
+            android:theme="@style/AppTheme.Button"
+            android:text="2"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_3"
+            android:theme="@style/AppTheme.Button"
+            android:text="3"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:theme="@style/AppTheme.Button"
+            android:text="+"
+            android:onClick="onOperationKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_0"
+            android:theme="@style/AppTheme.Button"
+            android:text="0"
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnSpan="2"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_decimal"
+            android:theme="@style/AppTheme.Button"
+            android:text="."
+            android:onClick="onNumberKeyClicked"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+
+        <Button
+            android:id="@+id/btn_Equal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="26sp"
+            android:text="="
+            android:onClick="onEqualKeyClicked"
+            style="@style/Widget.AppCompat.Button.Colored"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"
+            grid:layout_gravity="fill"/>
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>
